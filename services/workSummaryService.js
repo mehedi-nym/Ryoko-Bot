@@ -45,12 +45,24 @@ export const handleWorkSummaryMessage = async (message, client) => {
     if (isDirectMessage) {
       await sendDirectMessage(
         message.author,
-        [
-          'Ask me for your work summary like:',
-          'today hours',
-          'this week worked',
-          'this month attendance'
-        ].join('\n')
+[
+  '👋 Hey! This is Ryoko Bot.',
+  '',
+  'I help manage your remote workstation and keep track of your work activity and attendance. 💻📊',
+  '',
+  '🖥️ Remote Workstation',
+  '• I’ll notify you when your remote work session starts or ends.',
+  '• I can keep you updated about your workstation status.',
+  '',
+  '💬 You can also ask me here:',
+  '• "today hours" — Check your working hours today.',
+  '• "this week worked" — View your total working hours this week.',
+  '• "this month attendance" — Check your attendance summary for this month.',
+  '',
+  '🔔 I’ll notify you here whenever your work activity is recorded or your session status changes.',
+  '',
+  '🤖 Ryoko Bot - Keeping your remote work organized and tracked.'
+].join('\n')
       );
       return true;
     }
